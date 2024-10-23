@@ -1,0 +1,150 @@
+/* General Styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%); /* Gradient background */
+    height: 100%;
+}
+ul{
+    text-align: justify;
+}
+
+
+/* Center the form vertically and horizontally */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensure the content takes the full height of the screen */
+}
+
+/* Container for the form */
+section {
+    background: white;
+    padding: 100px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Soft shadow for form container */
+    width: 300px; /* Set a consistent width for the form */
+    text-align: center; /* Center all text elements */
+}
+
+/* Form Header */
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: 600;
+}
+
+/* Input Fields Styling */
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 20px 0;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-sizing: border-box;
+    transition: border 0.3s ease; /* Smooth border color transition */
+}
+
+/* Input Focus Effect */
+input[type="text"]:focus, input[type="password"]:focus {
+    border: 1px solid #4facfe; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Button Styling */
+button {
+    width: 100%;
+    background: linear-gradient(to right, #6a11cb, #2575fc); /* Gradient button */
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover Effect for Button */
+button:hover {
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Navigation Menu Styling */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #4facfe;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+nav ul li a:hover {
+    color: #333;
+    text-decoration: underline;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #666;
+}
+
+/* Responsive Design for Mobile Devices */
+@media (max-width: 480px) {
+    section {
+        width: 90%; /* Take more space on small screens */
+        padding: 20px;
+    }
+
+    button {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    input[type="text"], input[type="password"] {
+        padding: 10px;
+    }
+}
+
+
+
+/* login.css */
+
+header {
+    background-color: #f8f9fa; /* Light background for header */
+    padding: 20px; /* Space around the content */
+    border-bottom: 1px solid #ccc; /* Optional: Bottom border */
+}
+
+nav ul {
+    list-style-type: none; /* Remove bullets from list */
+    padding: 0; /* Remove padding */
+}
+
+nav ul li {
+    display: inline; /* Display list items inline */
+    margin-right: 15px; /* Space between items */
+}
+
+nav ul li a {
+    text-decoration: none; /* Remove underline */
+    color: #007bff; /* Link color */
+    font-weight: bold; /* Optional: Bold links */
+}
+
+nav ul li a:hover {
+    text-decoration: underline; /* Underline on hover */
+}

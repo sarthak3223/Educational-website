@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Login Page">
+    <meta name="keywords" content="login, authentication">
+    <meta name="author" content="Your Name">
+    <title>Login | EduSite</title>
+    <link rel="stylesheet" href="css\login.css">
+</head>
+<body>
+    
+
+    <section>
+        <h2>Login</h2>
+        <!-- Login Form -->
+        <form action="dashboard.html" method="post">
+            <!-- Username Field -->
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br><br>
+
+            <!-- Password Field -->
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br><br>
+
+            <!-- Login Button -->
+            <button type="submit">Login</button>
+        </form>
+        <p>Don't have an account? <a href="signup.html">Signup here</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 EduSite. All rights reserved.</p>
+    </footer>
+    <script>
+        // Function to simulate login authentication and redirect
+        function login(event) {
+            event.preventDefault(); // Prevent form submission
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+    
+            // Simulate a simple check for username and password (replace with actual validation)
+            if (username === "admin" && password === "password123") {
+                // If credentials are correct, redirect to the dashboard
+                window.location.href = "dashboard.html";
+            } else {
+                alert("Invalid username or password. Please try again.");
+            }
+        }
+    
+        // Attach the login function to form submission
+        const loginForm = document.querySelector("form");
+        loginForm.addEventListener("submit", login);
+    </script>
+</body>
+</html>

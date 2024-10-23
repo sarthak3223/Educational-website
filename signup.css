@@ -1,0 +1,106 @@
+/* signup.css */
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light grey background */
+    color: #333; /* Dark text color */
+}
+
+/* Header Styles */
+header {
+    background-color: #007bff; /* Blue background */
+    color: #fff; /* White text color */
+    padding: 20px; /* Padding around header */
+    text-align: center; /* Centered text */
+}
+
+/* Navigation Styles */
+nav ul {
+    list-style-type: none; /* Remove bullets from list */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+}
+
+nav ul li {
+    display: inline; /* Display list items inline */
+    margin-right: 15px; /* Space between items */
+}
+
+nav ul li a {
+    text-decoration: none; /* Remove underline */
+    color: #fff; /* White link color */
+    font-weight: bold; /* Bold links */
+}
+
+nav ul li a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Section Styles */
+section {
+    max-width: 500px; /* Max width of the form */
+    margin: 50px auto; /* Center the form horizontally and add margin at the top */
+    padding: 20px; /* Padding inside the section */
+    background-color: #fff; /* White background for the form */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+/* Form Styles */
+form {
+    display: flex; /* Flexbox for layout */
+    flex-direction: column; /* Stack form elements vertically */
+}
+
+label {
+    margin-bottom: 5px; /* Space below labels */
+    font-weight: bold; /* Bold labels */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    padding: 10px; /* Padding inside input fields */
+    margin-bottom: 15px; /* Space below input fields */
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #007bff; /* Blue border on focus */
+    outline: none; /* Remove outline */
+}
+
+/* Button Styles */
+button {
+    padding: 10px; /* Padding inside button */
+    background-color: #007bff; /* Blue background */
+    color: #fff; /* White text color */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    font-size: 16px; /* Font size */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Footer Styles */
+footer {
+    text-align: center; /* Centered text */
+    margin-top: 20px; /* Space above footer */
+    padding: 10px; /* Padding inside footer */
+    background-color: #007bff; /* Blue background */
+    color: #fff; /* White text color */
+    position: relative; /* Positioning context for footer */
+    bottom: 0; /* Stick to bottom */
+    width: 100%; /* Full width */
+}

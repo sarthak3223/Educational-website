@@ -1,0 +1,110 @@
+/* General Styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4; /* Light background color */
+}
+
+/* Header and Navigation */
+header {
+    background: linear-gradient(to right, #38ef7d, #11998e); /* Gradient background */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px; /* Add margin below the navigation */
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffeb3b; /* Change color on hover */
+}
+
+/* Main Section */
+main {
+    padding: 20px;
+}
+
+/* Featured Courses Section */
+#featured {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.course-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Allow wrapping for responsive design */
+}
+
+.course {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+    margin: 15px;
+    padding: 20px;
+    text-align: center;
+    width: 280px; /* Set a consistent width for course cards */
+    transition: transform 0.3s; /* Add transition effect */
+}
+
+.course:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.course img {
+    width: 100%; /* Make image responsive */
+    border-radius: 10px;
+}
+
+/* About Section */
+#about {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#about p {
+    max-width: 600px; /* Set max width for paragraph */
+    margin: 0 auto; /* Center align */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin: 20px 0;
+    color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column; /* Stack menu items on small screens */
+        margin: 0;
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Add margin for stacked items */
+    }
+
+    .course-container {
+        flex-direction: column; /* Stack course cards */
+        align-items: center; /* Center align course cards */
+    }
+}

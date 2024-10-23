@@ -1,0 +1,140 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.sidebar .logo {
+    margin-bottom: 30px;
+}
+
+.sidebar img {
+    width: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.sidebar h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.sidebar nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    padding: 15px 0;
+}
+
+.sidebar nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+}
+
+.sidebar nav ul li a:hover {
+    background-color: #575757;
+}
+
+/* Main Content Styling */
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+    background-color: #fff;
+}
+
+/* Topbar Styling */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #3b3b3b;
+    color: #fff;
+}
+
+.topbar-left h1 {
+    margin: 0;
+}
+
+.topbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.profile-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.btn-logout {
+    padding: 10px 15px;
+    background-color: #ff4b4b;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.btn-logout:hover {
+    background-color: #ff7676;
+}
+
+/* Dashboard Content */
+.dashboard-content {
+    margin-top: 20px;
+}
+
+.dashboard-widgets {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.widget {
+    background-color: #eee;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 22%;
+    margin-bottom: 20px;
+    text-align: center;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.widget h3 {
+    margin-top: 0;
+}
+
+.widget p {
+    font-size: 16px;
+}
+
+/* Footer Styling */
+.footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    width: calc(100% - 250px);
+    bottom: 0;
+    left: 250px;
+}

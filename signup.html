@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Signup Page">
+    <meta name="keywords" content="signup, register">
+    <meta name="author" content="Your Name">
+    <title>Signup | EduSite</title>
+    <link rel="stylesheet" href="css\signup.css">
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script> <!-- Include Razorpay Checkout -->
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+        <h1>Welcome to EduSite</h1>
+    </header>
+
+    <section>
+        <h2>Create an Account</h2>
+        <!-- Signup Form -->
+        <form id="signupForm" onsubmit="openPayment(event)">
+            <label for="new-username">Username:</label>
+            <input type="text" id="new-username" name="new-username" placeholder="Enter Username" required><br><br>
+
+            <label for="new-email">Email:</label>
+            <input type="email" id="new-email" name="new-email" placeholder="Enter Email" required><br><br>
+
+            <label for="new-password">Password:</label>
+            <input type="password" id="new-password" name="new-password" placeholder="Enter Password" required><br><br>
+
+            <!-- Subscription Section -->
+            <div class="subscription">
+                <h3>Choose Your Subscription Plan</h3>
+                <input type="radio" id="basic" name="subscription" value="basic" checked>
+                <label for="basic">Basic Plan - $10/month</label><br>
+                
+                <input type="radio" id="premium" name="subscription" value="premium">
+                <label for="premium">Premium Plan - $20/month</label><br>
+
+                <input type="radio" id="lifetime" name="subscription" value="lifetime">
+                <label for="lifetime">Lifetime Access - $150 (one-time)</label><br>
+            </div>
+
+            <button type="submit">Signup</button>
+        </form>
+        <p>Already have an account? <a href="login.html">Login here</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 EduSite. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function openPayment(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Get selected subscription plan
+            const subscriptionPlan = document.querySelector('input[name="subscription"]:checked').value;
+            let amount;
+
+            // Set amount based on the subscription plan
+            switch (subscriptionPlan) {
+                case 'basic':
+                    amount = 1000; // $10.00
+                    break;
+                case 'premium':
+                    amount = 2000; // $20.00
+                    break;
+                case 'lifetime':
+                    amount = 15000; // $150.00
+                    break;
+                default:
+                    amount = 1000; // Default to basic
+            }
+
+            // Razorpay payment options
+            const options = {
+                key: 'YOUR_RAZORPAY_KEY', // Enter the Key ID generated from the Razorpay Dashboard
+                amount: amount, // Amount in paise
+                currency: 'INR', // Currency code
+                name: 'EduSite',
+                description: 'Subscription Payment',
+                image: 'https://example.com/your_logo.jpg', // Your logo image
+                handler: function (response) {
+                    alert(`Payment successful! Payment ID: ${response.razorpay_payment_id}`);
+                    // Here you can redirect to another page or handle post-payment logic
+                    window.location.href = 'success.html'; // Redirect to a success page
+                },
+                prefill: {
+                    name: document.getElementById('new-username').value,
+                    email: document.getElementById('new-email').value,
+                },
+                theme: {
+                    color: '#38ef7d' // Theme color for the Razorpay checkout
+                }
+            };
+
+            const razorpay = new Razorpay(options);
+            razorpay.open(); // Open the Razorpay payment gateway
+        }
+    </script>
+</body>
+</html>
